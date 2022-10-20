@@ -1,0 +1,30 @@
+<div class="footer">
+    <div class="footer--wrapper ">
+        <div class="icon footer-center">
+            <ng-container *ngTemplateOutlet="UmgZone"></ng-container>
+        </div>
+        <div class="text footer-center">
+            <ng-container *ngTemplateOutlet="TextArea"></ng-container>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #UmgZone>
+    <div class="icon-inside" *ngIf="true">
+        <img [src]="'https://images2.imgbox.com/5c/75/E7dZ2AYw_o.png'" alt="" class="cover">
+    </div>
+</ng-template>
+
+
+<ng-template #TextArea>
+    <div class="text-inside">
+        <div class="content">
+         <p class="plain">Proyecto desarrollado por los estudiantes de los cursos de Desarrollo Web y Analasis de sistemas II</p>
+    </div>
+    </div>
+</ng-template>
+
+
+

@@ -1,0 +1,73 @@
+.footer {
+    background-color: var(--color-1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    height: 85px;
+    border-top: solid 1px var(--color-2);
+}
+
+.footer .footer--wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0;
+}
+
+.footer .footer--wrapper .footer-center {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.footer--wrapper .icon {
+    width: 25%;
+    padding: 0 .5rem;
+}
+
+.footer--wrapper .text {
+    width: 200%;
+    padding: 0 .5rem;
+    position: relative;
+}
+
+
+.footer--wrapper .icon .icon-inside {
+    display: flex;
+    gap: .5rem
+}
+
+.footer--wrapper .icon .icon-inside .cover {
+    width: 75px;
+    height:75px;
+    object-fit: cover;
+}
+
+
+
+.footer--wrapper .text-inside {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+}
+
+
+.footer--wrapper .text-inside .content {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: .5rem
+}
+
+
+
+.footer--wrapper .text-inside .content .plain {
+    font-size: 1.35rem;
+    font-family: var(--font-family-3);
+    color: var(--color-4);
+}
