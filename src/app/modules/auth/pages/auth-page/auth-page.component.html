@@ -1,1 +1,50 @@
-<p>auth-page works!</p>
+<div class="login-auth-page"> 
+    <div class="login">
+        <div class="header-wrapper">
+            <h1>Bienvenidos al mejor CRM</h1>
+        </div>
+        <div class="login-wrapper">
+            <form (ngSubmit)="sendLogin()" [formGroup]="formLogin" class="login-form">
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                </div>
+                <div>
+                    <input formControlName="email" type="text" placeholder="Ingresa tu correo electrónico" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                </div>
+                    <div> 
+                        <input formControlName="password" type="password" placeholder="Ingresa tu contraseña" class="form-input">
+                    </div>
+                    <div class="form-action">
+                        <button [disabled]="formLogin.invalid" class="login-btn">Iniciar sesión</button>  
+                    </div>
+                    <div *ngIf="errorSession"> Ocurrió un error con tu Email o Password </div>
+                <div class="account-form">
+                    <h3>No tienes una cuenta, crea una <a href ="https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec">AHORA</a></h3>
+                </div>
+            </form>   
+        </div>
+    </div>
+
+    
+
+        <form class="form-logo">
+        <div class="logo">
+            <div class="logo header-center">
+                <ng-container *ngTemplateOutlet="Logo"></ng-container>
+            </div>
+        <ng-template #Logo>
+            <div class="logo-inside" *ngIf="true">
+                <img src="https://images2.imgbox.com/82/49/yxmGyy2i_o.png" alt="" class="cover">
+            </div>
+        </ng-template>
+        </div>   
+        <div style="text-align: right">
+            <button class="btn-login-admin" ><i class="uil uil-user-plus"></i>
+            </button>
+        </div>
+    </form>
+    
+</div>
