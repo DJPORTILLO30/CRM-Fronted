@@ -1,0 +1,57 @@
+<div class="register-auth-page">
+    <div class="header-wrapper">
+        <h1>Registro:</h1>
+    </div>
+    <div class="register-wrapper">
+        <form (ngSubmit)="sendData()" [formGroup]="formRegister" class="register-auth-form">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+            </div>
+            <div>
+                <input formControlName="name" type="text" placeholder="Ingresa tu nombre" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+            </div>
+            <div>
+                <input formControlName="email" type="text" placeholder="Ingresa tu correo electrónico" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono:</label>
+            </div>
+            <div>
+                <input formControlName="phone" type="text" placeholder="Ingresa tu número de teléfono" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="company">Compañía:</label>
+            </div>
+            <div>
+                <input formControlName="company" type="text" placeholder="Ingresa el nombre de tu compañia" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="role">Rol:</label>
+            </div>
+            <div>
+                <input formControlName="role" type="text" placeholder="Ingresa tu rol en la compañía" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="state">Estado:</label>
+            </div>
+            <div>
+                <input formControlName="state" type="text" placeholder="Activo o Inactivo" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+            </div>
+            <div>
+                <input formControlName="password" type="text" placeholder="Ingresa tu contraseña" class="form-input">
+            </div>
+            <div class="form-action">
+                <button  class="register-btn">Registrarse</button>  
+            </div>
+            <div>
+                <hr> Raw:{{formRegister.value | json}}
+            </div>
+        </form>
+    </div>
+</div>
