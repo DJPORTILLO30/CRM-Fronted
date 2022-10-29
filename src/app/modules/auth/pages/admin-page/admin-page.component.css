@@ -1,0 +1,80 @@
+.header-wrapper{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #1A6690;
+    font-size: 1 rem;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-49%, -49%);
+}
+.login-wrapper {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #1A6690;
+    font-size: 1.5rem;
+    justify-content:flex-start;
+}
+.form-input{
+    margin-top: 0.5rem;
+    margin-block-end: 2rem;
+    font-family: 'catamaran';
+    font-size: 1rem;
+    color:#181818;
+    width: 300px;
+    border: 0;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    height: 2.5rem;
+    
+    
+
+}
+.login-btn{
+    background-color: #1A6690;
+    color: #FFFFFF;
+    font-family: "Rubik";
+    font-size: 1.1 rem;
+    width: 220px;
+    height:40px;
+    border: #1A6690;
+}
+.account-form{
+    font-family: 'catamaran';
+    font-size: 1rem;
+    color:#181818;
+}
+
+.login-form{
+    display: flex;
+    width : 100%;
+    justify-content:center;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    width: 100vh;
+    max-width: 600px;
+    max-height: none !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    border:0
+}
+.login-auth-page{
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    height:auto;
+    justify-content: space-between;    
+}
+.login-auth-page > form{
+    background-color:#1A6690;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 110vh;
+    height:110vh;
+}
+
+
