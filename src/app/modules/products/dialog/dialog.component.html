@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Agregar Producto</h1>
+<div mat-dialog-content>
+  
+<form [formGroup]="productsForm">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre del Producto</mat-label>
+    <input formControlName="name" matInput placeholder="Ej. Sombrilla">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Descripcion del Producto</mat-label>
+    <input formControlName="description" matInput placeholder="Ej. Prod. Personal">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Categoria</mat-label>
+    <mat-select formControlName="Category" placeholder="Categoria">
+      <mat-option value="Home">Para el hogar</mat-option>
+      <mat-option value="Summer">Para el verano</mat-option>
+      <mat-option value="HomeOffice">Para home office</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field appearance="outline">
+    <mat-label>Precio</mat-label>
+    <input formControlName="Price" matInput type="number" placeholder="Ej. Q100">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Caracteristica</mat-label>
+    <input formControlName="Feature" matInput placeholder="Ej. Negra">
+  </mat-form-field>
+
+</form>
+
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+  <button mat-raised-button color="primary" (click)="insertProducts()">Guardar</button>
+</div>
