@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
@@ -11,7 +12,8 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 @NgModule({
   declarations: [
     AuthPageComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    AdminPageComponent
   ],
   imports: [
     CommonModule,
