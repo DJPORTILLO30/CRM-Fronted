@@ -3,12 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { SessionGuard } from '@core/guards/session.guard';
 import { HomePageComponent } from '@modules/home/pages/home-page/home-page.component';
 import { AuthPageComponent} from './pages/auth-page/auth-page.component'
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 const routes: Routes = [
   {
     path:'login',
     component:AuthPageComponent,
-    //loadChildren:()=> import(`./auth.module`).then(m=>m.AuthModule)
+  },
+  {
+    path:'register',
+    component:RegisterPageComponent,
   },
   {
     path: '',
