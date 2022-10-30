@@ -1,0 +1,25 @@
+.boton{
+    margin-left: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.toolbar{
+    margin-top: 5px;
+    height: 60px;
+}
+.span {
+    margin: auto;
+}
+
+table {
+    width: 100%;
+  }
+
+
+.pointer{
+    margin-right: 5px;
+    cursor: pointer;
+
+    height: 35px;
+}

@@ -1,1 +1,62 @@
-<p>products-page works!</p>
+<div class="container">
+    <button class="boton" mat-raised-button color="primary">
+      <mat-icon>add</mat-icon> 
+      Nuevo Producto</button>
+
+      <div class="mat-elevation-z8">
+        <mat-toolbar class="toolbar" color="primary">
+          <span class="span">Productos</span>
+      </mat-toolbar>
+  
+      <table mat-table [dataSource]="dataSource">
+          <!-- Position Column -->
+          <ng-container matColumnDef="Nombre">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="Descripcion">
+            <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+            <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+          </ng-container>
+        
+          <!-- Weight Column -->
+          <ng-container matColumnDef="Categoria">
+            <th mat-header-cell *matHeaderCellDef> Categoria </th>
+            <td mat-cell *matCellDef="let element"> {{element.Category}} </td>
+          </ng-container>
+        
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Precio">
+            <th mat-header-cell *matHeaderCellDef> Precio </th>
+            <td mat-cell *matCellDef="let element"> {{element.Price}} </td>
+          </ng-container>
+        
+                  <!-- Symbol Column -->
+          <ng-container matColumnDef="Caracteristica">
+            <th mat-header-cell *matHeaderCellDef> Caracteristica </th>
+            <td mat-cell *matCellDef="let element"> {{element.Feature}} </td>
+          </ng-container>
+  
+                          <!-- Symbol Column -->
+          <ng-container matColumnDef="Acciones">
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element" style="text-align: right;"> 
+              <button mat-raised-button color="primary" class="pointer" matTooltip="Editar Producto" >
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-raised-button color="warn" class="pointer" matTooltip="Eliminar Producto">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+  
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+</div>

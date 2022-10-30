@@ -7,7 +7,6 @@ import { OrderListPipe } from './pipe/order-list.pipe';
 import { ImgBrokenDirective } from './directives/img-broken.directive';
 
 
-
 @NgModule({
   declarations: [
     HeaderBarComponent,
