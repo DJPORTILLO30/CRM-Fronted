@@ -29,7 +29,7 @@
     
 
 }
-.login-btn{
+.logina-btn{
     background-color: #1A6690;
     color: #FFFFFF;
     font-family: "Rubik";
@@ -78,3 +78,14 @@
 }
 
 
+.uil-user-check{
+    width: 400px;
+    height:400px;
+}
+
+input.ng-invalid.ng-touched {
+    border: solid 2px red !important
+}
+.logina-btn:disabled{
+    opacity: .5;
+}

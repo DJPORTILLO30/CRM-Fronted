@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SessionGuard } from '@core/guards/session.guard';
 import { HomePageComponent } from '@modules/home/pages/home-page/home-page.component';
 import { AuthPageComponent} from './pages/auth-page/auth-page.component'
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { UserRegistrationPageComponent } from './user-registration-page/user-registration-page.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,11 @@ const routes: Routes = [
   },
   {
     path:'login-admin',
-    component:AdminPageComponent
+    component:AdminPageComponent,
+  },
+  {
+    path:'info-users',
+    component:UserRegistrationPageComponent,
   },
   {
     path: '',
@@ -25,10 +30,7 @@ const routes: Routes = [
     loadChildren:()=> import(`../home/home.module`).then(m=> m.HomeModule),
     canActivate:[SessionGuard]
   },
-  {
-    path:'login-admin',
-    component:AdminPageComponent
-  }
+ 
 ];
 
 @NgModule({

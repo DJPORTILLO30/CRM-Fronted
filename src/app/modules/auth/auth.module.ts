@@ -6,13 +6,18 @@ import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { AdministrationPageComponent } from './administration-page/administration-page.component';
+import { UserRegistrationPageComponent } from './user-registration-page/user-registration-page.component';
+
 
 
 @NgModule({
   declarations: [
     AuthPageComponent,
     RegisterPageComponent,
-    AdminPageComponent
+    AdminPageComponent,
+    AdministrationPageComponent,
+    UserRegistrationPageComponent
   ],
   imports: [
     CommonModule,
