@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { createUserDTO } from '@core/models/user';
 import { RegisterUserService } from '@modules/auth/services/register-user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -9,7 +11,7 @@ import { RegisterUserService } from '@modules/auth/services/register-user.servic
 })
 export class RegisterPageComponent implements OnInit {
   formRegister: FormGroup = new FormGroup({})
-  constructor(private registerService: RegisterUserService) { }
+  constructor(private registerService: RegisterUserService, private router: Router) { }
 
   ngOnInit(): void {
     
@@ -41,9 +43,21 @@ export class RegisterPageComponent implements OnInit {
     })
   }
 
-  sendData():void{
-    const body = this.formRegister.value
-    console.log('CAPTURANDO', body)
-  }
 
+  createNewUser(){
+    const user: createUserDTO={
+      name: this.formRegister.value.name,
+      email:this.formRegister.value.email,
+      phone:this.formRegister.value.phone,
+      company:this.formRegister.value.company,
+      role:this.formRegister.value.role,
+      state:this.formRegister.value.state,
+      password:this.formRegister.value.password
+    }
+    this.registerService.registerUser(user)
+    .subscribe(data => {
+      console.log('CREATED',user)
+      this.router.navigate(['/','contacs'])
+    })
+  }
 }

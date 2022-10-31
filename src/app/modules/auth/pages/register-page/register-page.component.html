@@ -3,7 +3,7 @@
         <h1>Registro:</h1>
     </div>
     <div class="register-wrapper">
-        <form (ngSubmit)="sendData()" [formGroup]="formRegister" class="register-auth-form">
+        <form (ngSubmit)="createNewUser()" [formGroup]="formRegister" class="register-auth-form">
             <div class="form-group">
                 <label for="name">Nombre:</label>
             </div>
@@ -48,9 +48,6 @@
             </div>
             <div class="form-action">
                 <button  class="register-btn">Registrarse</button>  
-            </div>
-            <div>
-                <hr> Raw:{{formRegister.value | json}}
             </div>
         </form>
     </div>
