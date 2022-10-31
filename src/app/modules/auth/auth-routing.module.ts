@@ -5,7 +5,7 @@ import { HomePageComponent } from '@modules/home/pages/home-page/home-page.compo
 import { AuthPageComponent} from './pages/auth-page/auth-page.component'
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
-import { UserRegistrationPageComponent } from './user-registration-page/user-registration-page.component';
+import { UserRegistrationPageComponent } from './pages/user-registration-page/user-registration-page.component';
 
 const routes: Routes = [
   {
