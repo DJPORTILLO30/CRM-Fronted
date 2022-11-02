@@ -16,11 +16,13 @@ import { MatCardModule } from '@angular/material/card';
 import { BussniesRoutingModule } from './bussnies-routing.module';
 import { BussniesPageComponent } from './pages/bussnies-page/bussnies-page.component';
 import { DialogFormBussinesComponent } from './utils/dialog-form-bussines/dialog-form-bussines.component';
+import { TableBussinesComponent } from './utils/table-bussines/table-bussines.component';
 
 @NgModule({
   declarations: [
     BussniesPageComponent,
-    DialogFormBussinesComponent
+    DialogFormBussinesComponent,
+    TableBussinesComponent
   ],
   imports: [
     CommonModule,
