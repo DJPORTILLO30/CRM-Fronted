@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Bussines } from '@core/models/bussines/bussines';
+import { DialogDataBussinesComponent } from '../dialog-data-bussines/dialog-data-bussines.component';
 import { DialogFormBussinesComponent } from '../dialog-form-bussines/dialog-form-bussines.component';
 
 
@@ -32,7 +33,10 @@ export class TableBussinesComponent implements OnInit {
   }
 
   onGetData(element: Bussines): void {
-
+    this.dialog.open(DialogDataBussinesComponent, {
+      data: element,
+      width: '50%'
+    });
   }
 
 }
