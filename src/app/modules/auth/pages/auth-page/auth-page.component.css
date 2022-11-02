@@ -78,7 +78,7 @@
     justify-items:left;
     flex-direction: column;
     align-items:center;
-    justify-content: end;
+    justify-content: flex-end;
     top: 10px;
     left:1470px;
     position:fixed;

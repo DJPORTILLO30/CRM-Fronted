@@ -40,8 +40,8 @@ export class PermissionsPageComponent implements OnInit {
     this.permissionsService.deletePermission(id)
     .subscribe(data =>{
       console.log('DELETED', id)
-      //window.location.reload()
     })
+    //window.location.reload()
   }
 
 
