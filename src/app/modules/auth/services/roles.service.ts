@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter,Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { createRoleDTO, Role } from '@core/models/roles'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class RolesService {
 
   registerRole(data: createRoleDTO){
     return this.http.post<Role>(`${this.URL}/roles`,data)
+  }
+
+  deleteRole(id:number):Observable<any>{
+    return this.http.delete<any>(`${this.URL}/roles/${id}`)
   }
 
 }

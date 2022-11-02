@@ -7,7 +7,9 @@
     font-size: var(--font-size-1);
     color:var(--color-4);
     margin-right: 4rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     border-top-left-radius:5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -15,7 +17,7 @@
 }
 .items-table{
     font-family: var(--font-family-1);
-    width: 87.8%;
+    width: 88%;
     margin-left: 0.2rem;
     text-align:center;
     box-shadow: var(--shadow-2);
@@ -52,12 +54,10 @@
     flex-direction: column;
     align-items:center;
     justify-content: flex-end;
-    margin-top: 10px;
-    margin-left: 20px;
     cursor: pointer;
     position:fixed;
-    top: 170px;
-    left:655px;
+    top:165px;
+    left:680px;
 }
 .register-btn-role{
     font-size: 15px;
@@ -75,12 +75,10 @@
     flex-direction: column;
     align-items:center;
     justify-content: flex-end;
-    margin-top: 10px;
-    margin-left: 20px;
     cursor: pointer;
     position:fixed;
-    top: 170px;
-    left:1220px;
+    top: 165px;
+    left:1245px;
 }
 
 .delete-btn{
