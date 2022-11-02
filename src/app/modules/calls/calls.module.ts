@@ -18,11 +18,13 @@ import { MatCardModule } from '@angular/material/card';
 
 import { CallsPageComponent } from './pages/calls-page/calls-page.component';
 import { DialogFormCallsComponent } from './utils/dialog-form-calls/dialog-form-calls.component';
+import { TablesCallsComponent } from './utils/tables-calls/tables-calls.component';
 
 @NgModule({
   declarations: [
     CallsPageComponent,
     DialogFormCallsComponent,
+    TablesCallsComponent
   ],
   imports: [
     CommonModule,
