@@ -1,1 +1,35 @@
-<p>user-registration-page works!</p>
+<div class="user-page">
+    <div class="container"> 
+        <div class="header">
+            <h1>Usuarios Registrados</h1>
+        </div>
+        <div class="user-wrapper">
+            <form class="user-table">
+                <table  class="items-table">
+                    <thead >
+                        <tr>
+                            <th for="id">Id</th>
+                            <th for="email">E-Mail</th>
+                            <th for="phone">Telefono</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- <tr *ngFor="let permission of permissions">
+                            <td>{{permission.id}}</td>
+                            <td>{{permission.name}}</td>
+                            <td>{{permission.description}}</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </form>
+            <div class="form-action" >
+                <button class="register-btn"><i class="uil uil-edit"></i></button>
+            </div>
+            <div class="form-action" >
+                <button class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+            </div>
+        </div>
+    </div>
+    
