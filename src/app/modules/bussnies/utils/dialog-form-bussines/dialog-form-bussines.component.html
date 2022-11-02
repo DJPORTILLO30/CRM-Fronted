@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>{{dataDialog.title}}</h1>
+<div mat-dialog-content>
+  <ng-container *ngIf="this.dataDialog.actionForm !== 'delete'; else elseFormBussines">
+    <form [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre del negocio</mat-label>
+        <input formControlName="name" matInput placeholder="Ej. Negocio de sombrias">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre del Contacto</mat-label>
+        <input formControlName="contactName" matInput placeholder="Ej. John Doe">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripcion del negocio</mat-label>
+        <textarea formControlName="description" matInput placeholder="Ej. Realización de sombrias"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Precio</mat-label>
+        <input formControlName="amount" matInput type="number" placeholder="Ej. Q100">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Ingresos</mat-label>
+        <input formControlName="income" matInput type="number" placeholder="Ej. Q100">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha de cierre</mat-label>
+        <input formControlName="closingDate" matInput type="date" placeholder="Ej. Q100">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Campaña fuente</mat-label>
+        <input formControlName="campaingSource" matInput type="text" placeholder="Ej. Campaña sombrias">
+      </mat-form-field>
+    </form>
+  </ng-container>
+  <ng-template #elseFormBussines>
+    <strong>¿Desea eliminar en verdad el negocio?</strong>
+  </ng-template>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">{{dataDialog.titleButton}}</button>
+</div>
