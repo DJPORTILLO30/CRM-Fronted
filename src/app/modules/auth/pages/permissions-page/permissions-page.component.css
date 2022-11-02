@@ -1,0 +1,108 @@
+
+.header{
+    font-family: var(--font-family-1);
+    background-color: var(--color-1);
+    width: 500px;
+    height: 40px;
+    font-size: var(--font-size-1);
+    color:var(--color-4);
+    margin-right: 4rem;
+    text-align: center;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.items-table{
+    font-family: var(--font-family-1);
+    width: 87.8%;
+    margin-left: 0.2rem;
+    text-align:center;
+    box-shadow: var(--shadow-2);
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    overflow:scroll;
+}
+.permissions-page{
+    display: flex;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+}
+.register-btn-permission{
+    font-size: 15px;
+    color:var(--color-1);
+    background-color: var(--color-4);
+    width: 20px;
+    height:20px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-items:center;
+    flex-direction: column;
+    align-items:center;
+    justify-content: end;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    position:fixed;
+    top: 170px;
+    left:655px;
+}
+.register-btn-role{
+    font-size: 15px;
+    color:var(--color-1);
+    background-color: var(--color-4);
+    width: 20px;
+    height:20px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-items:center;
+    flex-direction: column;
+    align-items:center;
+    justify-content: end;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    position:fixed;
+    top: 170px;
+    left:1220px;
+}
+
+.delete-btn{
+    font-size: 15px;
+    color:var(--color-4);
+    background-color: red;
+    width: 20px;
+    height:20px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-items:center;
+    flex-direction: column;
+    align-items:center;
+    justify-content: end;
+    cursor:pointer;
+}
+td, th{
+    padding: 5px;
+    box-shadow: var(--shadow-2);
+}
+

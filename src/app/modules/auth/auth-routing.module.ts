@@ -6,6 +6,7 @@ import { AuthPageComponent} from './pages/auth-page/auth-page.component'
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserRegistrationPageComponent } from './pages/user-registration-page/user-registration-page.component';
+import { PermissionsPageComponent } from './pages/permissions-page/permissions-page.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path:'info-users',
     component:UserRegistrationPageComponent,
+  },
+  {
+    path:'permissions',
+    component:PermissionsPageComponent,
   },
   {
     path: '',

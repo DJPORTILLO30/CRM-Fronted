@@ -1,0 +1,73 @@
+<div class="permissions-page">
+    <div class="container"> 
+        <div class="header">
+            <h1>Permisos</h1>
+        </div>
+        <div class="permissions-wrapper">
+            <form class="permissions-table">
+                <table  class="items-table">
+                    <thead >
+                        <tr>
+                            <th for="name">Nombre</th>
+                            <th for="description">Descripción</th>
+                            <th ></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let permission of permissions">
+                            <td>{{permission.name}}</td>
+                            <td>{{permission.description}}</td>
+                            <td>
+                                <button (click)="deletePermission(permission.id)" class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="form-action" >
+                <button (click)="openModalPermission()"   class="register-btn-permission"><i class="uil uil-plus"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container"> 
+    <div class="header">
+        <h1>Roles</h1>
+    </div>
+        <div class="roles-wrapper">
+            <form class="roles-table">
+                <table class="items-table">
+                    <thead >
+                        <tr>
+                            
+                            <th for="name">Nombre</th>
+                            <th for="description">Descripción</th>
+                            <th ></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let role of roles">
+                            
+                            <td>{{role.name}}</td>
+                            <td>{{role.description}}</td>
+                            <td>
+                                <button class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </form>
+            <div class="form-action" >
+                <button (click)="openModalRole()" class="register-btn-role"><i class="uil uil-plus"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" *ngIf="modalSwitchPermission ==true">
+    <app-register-permission-modal></app-register-permission-modal>
+</div>
+<div class="modalRole" *ngIf="modalSwitchRole ==true">
+    <app-register-roles-modal></app-register-roles-modal>
+</div>
+
+
