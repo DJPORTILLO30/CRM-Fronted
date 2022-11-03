@@ -9,27 +9,39 @@
                     <thead >
                         <tr>
                             <th for="id">Id</th>
-                            <th for="email">E-Mail</th>
+                            <th for="name">Nombre</th>
+                            <th for="email">Email</th>
                             <th for="phone">Telefono</th>
-                            
+                            <th for="company">Compañía</th>
+                            <th for="state">Estado</th>
+                            <th for="role">Rol</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        <!-- <tr *ngFor="let permission of permissions">
-                            <td>{{permission.id}}</td>
-                            <td>{{permission.name}}</td>
-                            <td>{{permission.description}}</td>
-                        </tr> -->
+                        <tr *ngFor="let user of users">
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.company}}</td>
+                            <td>{{user.state}}</td>
+                            <td>{{user.role}}</td>
+                            <td>
+                                <div class="form-action" >
+                                    <button class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                                </div>
+                            </td>
+
+                        </tr>
                     </tbody>
                 </table>
             </form>
             <div class="form-action" >
                 <button class="register-btn"><i class="uil uil-edit"></i></button>
             </div>
-            <div class="form-action" >
-                <button class="delete-btn"><i class="uil uil-trash-alt"></i></button>
-            </div>
+            
         </div>
     </div>
     

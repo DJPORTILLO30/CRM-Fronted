@@ -16,6 +16,10 @@ export class RegisterUserService {
      return this.http.post<User>(`${this.URL}/usuarios/register`,data);
   }
 
+  getAllUsers(){
+    return this.http.get<User[]>(`${this.URL}/usuarios`)
+  }
+
 }
 
 
