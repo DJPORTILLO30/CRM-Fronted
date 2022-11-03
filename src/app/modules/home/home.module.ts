@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SharedModule } from '@shared/shared.module';
+import { TableInfoComponent } from './components/table-info/table-info.component';
 
 
 @NgModule({
   declarations: [
-    HomePageComponent
+    HomePageComponent,
+    TableInfoComponent
   ],
   imports: [
     CommonModule,
