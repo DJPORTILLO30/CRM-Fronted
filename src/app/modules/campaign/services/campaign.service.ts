@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { CampaignModel } from '@core/models/campaigns/campaign.model';
 
@@ -22,20 +22,14 @@ export class CampaignService {
   createCampaign(item: CampaignModel): Observable<any> {
     return this.http.post<any>(this.URL, item);
   }
-  modifyCampaign(id: number): Observable<any> {
-    return this.http.put<any>(this.URL + "/" + id, id);
+
+  modifyCampaign(id:number, value:any): Observable<any> {
+    const path = this.URL + "/" + id;
+    return this.http.put<any>(path, value );
   }
+
   deleteCampaign(id: number): Observable<any> {
     return this.http.delete<any>(this.URL + "/" + id);
   }
 }
 
-// export class ConectCampaignsService {
-//   constructor() { }
-//   private LoadCampaigns = new BehaviorSubject<any>(false);
-//   LoadCurrentCampaigns = this.LoadCampaigns.asObservable();
-//   setDataCampaigns(value: any): void {
-//     this.LoadCampaigns.next(value);
-//   }
-
-// }
