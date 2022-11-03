@@ -44,7 +44,7 @@ export class PermissionsPageComponent implements OnInit {
   }
 
   deleteRole(id:number){
-    this.rolesService.deleteRole(id)
+    this.rolesService.deleteRole(id) 
     .subscribe(data =>{
     })
     window.location.reload()

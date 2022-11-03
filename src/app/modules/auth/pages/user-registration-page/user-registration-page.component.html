@@ -30,17 +30,17 @@
                             <td>{{user.role}}</td>
                             <td>
                                 <div class="form-action" >
-                                    <button class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                                    <button (click)="deleteUser(user.id) "class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                                </div>
+                                <div class="form-action" >
+                                    <button class="register-btn"><i class="uil uil-edit"></i></button>
                                 </div>
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
             </form>
-            <div class="form-action" >
-                <button class="register-btn"><i class="uil uil-edit"></i></button>
-            </div>
+           
             
         </div>
     </div>
