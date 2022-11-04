@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ContactModel } from '@core/models/contacts/contacts.model';
 
@@ -12,6 +12,16 @@ export class ContactsService {
   URL: string = `${environment.api}/contacts`;
 
   constructor(private http: HttpClient) { }
+
+
+  getAllContacs$(): Observable<any> {
+    return this.http.get(this.URL)
+      .pipe(
+        map(({ data }: any) => {
+          return data
+        })
+      )
+  }
 
   getContacts(): Observable<ContactModel[]> {
     return this.http.get<ContactModel[]>(this.URL);
