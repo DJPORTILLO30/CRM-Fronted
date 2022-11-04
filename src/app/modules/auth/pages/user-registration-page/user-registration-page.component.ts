@@ -13,12 +13,24 @@ export class UserRegistrationPageComponent implements OnInit {
   permissions: Array<Permission> = [];
   users: Array<User> = [];
   constructor(private usersService:RegisterUserService, private router:Router) { }
-  modalSwitchPermission: boolean = false;
+  modalSwitchUser: boolean = false;
 
   ngOnInit(): void {
     this.getAllusers();
-    
+    this.closeModalUser();
   }
+
+  openModalUser(){
+    this.modalSwitchUser=true;
+  }
+
+  closeModalUser(){
+    this.usersService.modalUser
+    .subscribe(response =>{
+      this.modalSwitchUser = response
+    })
+  }
+
   getAllusers(){
     this.usersService.getAllUsers()
     .subscribe((data:any)=>{

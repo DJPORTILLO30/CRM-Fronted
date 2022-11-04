@@ -3,7 +3,7 @@
         <div class="header">
             <h1>Usuarios Registrados</h1>
             <div class="form-action" >
-                <button class="register-btn"><i class="uil uil-plus"></i></button>
+                <button (click)="openModalUser()" class="register-btn"><i class="uil uil-plus"></i></button>
             </div>
         </div>
         <div class="user-wrapper">
@@ -41,7 +41,10 @@
                 </table>
                 
             </form>
-            
+           
+            <div *ngIf="modalSwitchUser ==true" class="register-user-modal">
+                <app-register-user-modal></app-register-user-modal>
+            </div>
            
         </div>
     </div>

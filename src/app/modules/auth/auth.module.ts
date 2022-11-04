@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserRegistrationPageComponent } from './pages/user-registration-page/user-registration-page.component';
+import { RegisterUserModalComponent } from './modals/register-user-modal/register-user-modal.component';
 
 
 
@@ -16,6 +17,7 @@ import { UserRegistrationPageComponent } from './pages/user-registration-page/us
     RegisterPageComponent,
     AdminPageComponent,
     UserRegistrationPageComponent,
+    RegisterUserModalComponent,
   ],
   imports: [
     CommonModule,

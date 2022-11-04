@@ -55,9 +55,10 @@
     align-items:center;
     justify-content: flex-end;
     cursor: pointer;
-    position:fixed;
-    top:165px;
-    left:680px;
+    position: absolute;
+    top: 40%;
+    left: -90%;
+    transform: translate(-49%, -49%);
 }
 .register-btn-role{
     font-size: 15px;
@@ -76,9 +77,10 @@
     align-items:center;
     justify-content: flex-end;
     cursor: pointer;
-    position:fixed;
-    top: 165px;
-    left:1245px;
+    position: absolute;
+    top: 40%;
+    left: 850%;
+    transform: translate(-49%, -49%);
 }
 
 .delete-btn{
@@ -119,10 +121,11 @@ td, th{
     flex-direction: column;
     align-items:center;
     justify-content: flex-end;
-    top: 10px;
-    left:1470px;
-    position:fixed;
     cursor: pointer;
+    position: absolute;
+    top: 6%;
+    left: 97%;
+    transform: translate(-49%, -49%);
 }
 .uil-arrow-left{
     font-size: 35px;
@@ -134,9 +137,10 @@ td, th{
     flex-direction: column;
     align-items:center;
     justify-content: flex-end;
-    top: 10px;
-    left:1470px;
-    position:fixed;
     cursor: pointer;
+    position: absolute;
+    top: 5.7%;
+    left: 97%;
+    transform: translate(-49%, -49%);
 }
 
