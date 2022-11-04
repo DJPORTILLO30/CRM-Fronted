@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'https://crm-umg2022.herokuapp.com/api'
+  api:'https://crm-umg2022.herokuapp.com/api'
 };
 
 /*

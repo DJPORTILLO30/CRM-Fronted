@@ -1,0 +1,36 @@
+<table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef style="width: 20%;"> Nombre </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef style="width: 50%;"> Descripción </th>
+    <td mat-cell *matCellDef="let element" style="text-align: justify; padding: 25px;"> {{element.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="options">
+    <th mat-header-cell *matHeaderCellDef> Opciones </th>
+    <td mat-cell *matCellDef="let element">
+      <button class="boton" mat-raised-button color="primary" (click)="onGetData(element)" #tooltip="matTooltip"
+        matTooltip="Más información acerca del negocio" [matTooltipPosition]="'below'"
+        style="margin-right: 5px;margin-left: 20px;">
+        <mat-icon>info</mat-icon>
+      </button>
+      <button class="boton" mat-raised-button color="accent" #tooltip="matTooltip" matTooltip="Editar negocio"
+        [matTooltipPosition]="'below'" (click)="onTransferdataDialog('edit',element.id)" style="margin-right: 5px;">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button class="boton" mat-raised-button color="warn" #tooltip="matTooltip" matTooltip="Eliminar negocio"
+        (click)="onTransferdataDialog('delete',element.id)" [matTooltipPosition]="'below'">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
