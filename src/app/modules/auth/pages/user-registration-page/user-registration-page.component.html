@@ -1,0 +1,65 @@
+<div class="user-page">
+    <div class="container"> 
+        <a href="/administration/permissions">
+            <input type="button" class="gestion-btn" value="Gestionar Roles y Permisos"><i></i>
+        </a>
+        <div class="header">
+            <h1>Usuarios Registrados</h1>
+            <div class="form-action" >
+                <button (click)="openModalUser()" class="register-btn"><i class="uil uil-plus"></i></button>
+            </div>
+        </div>
+        <div class="user-wrapper">
+            <form class="user-table">
+                <table  class="items-table">
+                    <thead >
+                        <tr>
+                            <th for="id">Id</th>
+                            <th for="name">Nombre</th>
+                            <th for="email">Email</th>
+                            <th for="phone">Telefono</th>
+                            <th for="company">Compañía</th>
+                            <th for="state">Estado</th>
+                            <th for="role">Rol</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr *ngFor="let user of users">
+                            <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.phone}}</td>
+                            <td>{{user.company}}</td>
+                            <td>{{user.state}}</td>
+                            <td>{{user.role}}</td>
+                            <td>
+                                <div class="form-action" >
+                                    <button (click)="deleteUser(user.id) "class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-action" >
+                                    <button class="edit-btn"> <i class="uil uil-edit"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </form>
+           
+            <div *ngIf="modalSwitchUser ==true" class="register-user-modal">
+                <app-register-user-modal></app-register-user-modal>
+            </div>
+            <form>
+                <a href="/">
+                <input type="button" class="btn-home" ><i class="uil uil-estate"></i>
+            </a>
+        </form>
+            
+        </div>
+    </div>
+    

@@ -1,1 +1,13 @@
-<p>campaign-page works!</p>
+<div class="container">
+    <button class="boton" mat-raised-button color="primary" (click)="openDialog()">
+      Crear campaña <mat-icon>add</mat-icon>
+    </button>
+    <div>
+      <mat-card style="background: #1A6690;color: white;text-align: center; margin-top: 10px;font-weight: bolder;">
+        <mat-card-title>Campañas Actuales</mat-card-title>
+      </mat-card>
+    </div>
+    <div style="margin-top: 10px;" *ngIf="dataSource !== undefined">
+      <app-campaigns-table [dataSource]="dataSource" ></app-campaigns-table>
+    </div>
+  </div>

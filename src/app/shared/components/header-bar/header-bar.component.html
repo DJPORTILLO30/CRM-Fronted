@@ -4,15 +4,9 @@
             <ng-container *ngTemplateOutlet="Logo"></ng-container>
         </div>
 
-        <div class="side-bar">
-            <ul class="side-bar_list list-one">
-                <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
-                    <div class="list-wrapper-item">
-                        <i [ngClass]="['uil',item.icon]"></i>
-                        <span class="side-bar_list list-label">{{item.name}}</span>
-                    </div>
-                </li>
-            </ul>
+        <div class="side-bar header-center">
+            <ng-container *ngTemplateOutlet="SideBar"></ng-container>  
+        </div>
     </div>
 </div>
 
@@ -22,5 +16,20 @@
 <ng-template #Logo>
     <div class="logo-inside" *ngIf="true">
         <img [src]="'https://images2.imgbox.com/82/49/yxmGyy2i_o.png'" alt="" class="cover">
+    </div>
+</ng-template>
+
+<ng-template #SideBar>
+    <div class="side-bar_content" *ngIf="true">
+        <div class="cont">
+        <ul class="side-bar_list" >
+            <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
+                <div class="list-wrapper-item">
+                    <i [ngClass]="['uil',item.icon]"></i>
+                    <span class="side-bar_list list-label">{{item.name}}</span>
+                </div>
+            </li>
+        </ul>
+        </div>
     </div>
 </ng-template>

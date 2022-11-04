@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>{{dataDialog.title}}</h1>
+<div mat-dialog-content>
+  <ng-container *ngIf="this.dataDialog.actionForm !== 'delete'; else elseFormBussines">
+    <form [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Propietario Contacto</mat-label>
+        <input formControlName="ownerContact" matInput placeholder="Ej. Jhon Cena">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Correo</mat-label>
+        <input formControlName="email" matInput placeholder="Ej. Jhon@test.com">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Teléfono</mat-label>
+        <textarea formControlName="phone" matInput type="number" placeholder="Ej. 12345678"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Departamento</mat-label>
+        <input formControlName="department" matInput type="text" placeholder="Ej. Finanzas" >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Dirección</mat-label>
+        <input formControlName="address" matInput matInput type="text" placeholder="Ej. Jalapa">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input formControlName="description" matInput type="text" placeholder="Ej. Contacto a posible cliente de x negocio.">
+      </mat-form-field>
+    </form>
+  </ng-container>
+  <ng-template #elseFormBussines>
+    <strong>¿Desea eliminar en verdad el contacto?</strong>
+  </ng-template>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">{{dataDialog.titleButton}}</button>
+</div>

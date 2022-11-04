@@ -1,0 +1,120 @@
+.header-wrapper{
+    font-family: var(--font-family-1);
+    color: var(--color-1);
+    font-size: var(--font-size-3);
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.login-wrapper {
+    font-family: var(--font-family-3);
+    color: var(--color-1);
+    font-size: var(--font-size-2);
+    margin-left:2.5rem;
+}
+.form-input{
+    margin-top: var(--boreder-radius-2);
+    margin-block-end: 2rem;
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-1);
+    color:var(--color-5);
+    width: 300px;
+    box-shadow: var(--shadow-2);
+    border: 0
+}
+.login-btn{
+    background-color: var(--color-2);
+    color:var(--color-4);
+    font-family: var(--font-family-3);
+    font-size: var(--font-size-2);
+    width: 220px;
+    height:40px;
+    border:0
+}
+.account-form{
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-1);
+    color:var(--color-5);
+}
+
+.login-form{
+    display: flex;
+    width : 40%;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100vh;
+    max-height: none !important;
+}
+.login-auth-page{
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    height:auto;
+    justify-content: space-between;    
+}
+.login-auth-page > form{
+    background-color:var(--color-1);
+    width: 110vh;
+    height:110vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.btn-login-admin {
+    font-size: 35px;
+    color:var(--color-1);
+    background-color: var(--color-4);
+    width: 40px;
+    height:40px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    top: 10px;
+    left:1470px;
+    position:fixed;
+}
+.uil-user-exclamation{
+    font-size: 35px;
+    color:var(--color-1);
+    background-color: var(--color-4);
+    width: 40px;
+    height:40px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    top: 10px;
+    left:1470px;
+    position:fixed;
+}
+
+
+.uil-user-check{
+    width: 400px;
+    height:400px;
+}
+
+input.ng-invalid.ng-touched {
+    border: solid 2px red !important
+}
+.login-btn:disabled{
+    opacity: .5;
+}
+
+
