@@ -1,0 +1,27 @@
+<div class="role-modal-page">
+    <div class="modal-header">
+        <h1>Nuevo rol</h1>
+    </div>
+    <div class="roles-modal-wrapper">
+        <form (ngSubmit)="createNewRole()" [formGroup]="formRegisterRole" class="register-permission-modal">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+            </div>
+            <div>
+                <input formControlName="name" type="text" placeholder="Ingresa el nombre del rol" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción:</label>
+            </div>
+            <div>
+                <input formControlName="description" type="text" placeholder="Ingresa una breve descripción del rol" class="form-input">
+            </div>
+            <div class="form-action">
+                <button  class="register-btn">Registrar</button>  
+            </div>
+        </form>
+        <div class="form-action">
+            <button (click)="closeModalR()" class="exit-btn"><i class="uil uil-multiply"></i></button>  
+        </div>
+    </div>
+</div>

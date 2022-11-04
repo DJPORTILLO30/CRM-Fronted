@@ -1,0 +1,173 @@
+.user-registration-page{
+    display: flex;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+    margin: -25px 0 0 -25px;
+}
+
+
+.user-table {
+    display: flex;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin: -25px 0 0 0;
+    position: absolute;
+    transform: translate(-49%, -49%);
+    border:0
+   
+}
+.header{
+    font-family: var(--font-family-1);
+    background-color: var(--color-1);
+    width: 88%;
+    height: 40px;
+    font-size: var(--font-size-1);
+    color:var(--color-4);
+    text-align: left;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    border:0
+}
+.items-table{
+    font-family: var(--font-family-1);
+    width: 87.8%;
+    margin-left: 0.2rem;
+    text-align:center;
+    box-shadow: var(--shadow-2);
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    overflow:scroll;
+}
+
+.register-btn{
+    font-size: 15px;
+    color:var(--color-1);
+    background-color: var(--color-4);
+    width: 20px;
+    height:20px;
+    border: 1px;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-items:center;
+    flex-direction: column;
+    align-items:center;
+    justify-content: end;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    align-items: left;
+    position: absolute;
+    top: 20%;
+    left: 97%;
+    transform: translate(-49%, -49%);
+  
+}
+.delete-btn{
+    font-size: 15px;
+    color:var(--color-4);
+    background-color: red;
+    width: 30px;
+    height:20px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor:pointer;
+}
+.edit-btn{
+    font-size: 15px;
+    color:var(--color-4);
+    background-color: skyblue;
+    width: 30px;
+    height:20px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor:pointer;
+}
+.gestion-btn{
+    font-size: 15px;
+    font-family: var(--font-family-2);
+    color:var(--color-4);
+    background-color: var(--color-1);
+    width: 200px;
+    height:40px;
+    border:0;
+    border-top-left-radius:30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor:pointer;
+    position: absolute;
+    top: 25%;
+    left: 90%;
+    transform: translate(-49%, -49%);
+
+    
+}
+.btn-home{
+    font-size: 35px;
+    color:var(--color-4);
+    background-color: var(--color-1);
+    width: 40px;
+    height:40px;
+    border:0;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    top: 10px;
+    left:95%;
+    position:fixed;
+    cursor: pointer;
+}
+.uil-estate{
+    font-size: 35px;
+    color:var(--color-4);
+    width: 40px;
+    height:40px;
+    display: flex;
+    justify-items:left;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    top: 10px;
+    left:95%;
+    position:fixed;
+    cursor: pointer;
+}
+
+td, th{
+    padding: 5px;
+    box-shadow: var(--shadow-2);
+}
