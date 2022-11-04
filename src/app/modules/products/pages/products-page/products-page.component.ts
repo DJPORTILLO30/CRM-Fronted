@@ -38,10 +38,10 @@ export class ProductsPageComponent implements OnInit {
   }
 
   getProducts(){
-    this.api.getProduct()
+    this.api.getProducts()
     .subscribe({
       next: (res) =>{
-        this.dataSource = new MatTableDataSource(res);
+        this.dataSource = new MatTableDataSource(res.products);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },
