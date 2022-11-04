@@ -22,7 +22,7 @@ export class SessionGuard implements CanActivate {
     try{
       const token: boolean = this.cookieService.check('token')
       if(!token){
-        this.router.navigate(['/','auth'])
+        this.router.navigate(['/auth/login'])
       }
         return token
       

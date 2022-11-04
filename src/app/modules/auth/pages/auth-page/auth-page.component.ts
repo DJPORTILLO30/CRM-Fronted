@@ -41,7 +41,7 @@ export class AuthPageComponent implements OnInit {
       const {data} = responseOK
       const {token} = data
       this.cookie.set('token', token, 2, '/')
-      this.router.navigate(['/','contacs'])
+      this.router.navigate(['/'])
 
     },
     err =>{

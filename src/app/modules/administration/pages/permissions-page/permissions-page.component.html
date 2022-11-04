@@ -66,6 +66,9 @@
     <div class="form-action" >
         <button (click)="openModalRole()" class="register-btn-role"><i class="uil uil-plus"></i></button>
     </div>
+    <a href="/auth/info-users">
+        <input type="button" class="btn-back" ><i class="uil uil-arrow-left"></i>
+    </a>
 </div>
 <div class="modal" *ngIf="modalSwitchPermission ==true">
     <app-register-permission-modal></app-register-permission-modal>

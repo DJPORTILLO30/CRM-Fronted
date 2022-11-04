@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PermissionsService } from '@modules/auth/services/permissions.service';
+import { PermissionsService } from '@modules/administration/services/permissions.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { createPermissionDTO, Permission } from '@core/models/permission';
 import { Router } from '@angular/router';

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { createRoleDTO } from '@core/models/roles';
-import { RolesService } from '@modules/auth/services/roles.service';
+import { RolesService } from '@modules/administration/services/roles.service';
 
 @Component({
   selector: 'app-register-roles-modal',

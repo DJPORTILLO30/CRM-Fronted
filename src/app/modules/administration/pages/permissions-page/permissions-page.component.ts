@@ -3,8 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Permission } from '@core/models/permission';
 import { Role } from '@core/models/roles';
-import { PermissionsService } from '@modules/auth/services/permissions.service';
-import { RolesService } from '@modules/auth/services/roles.service';
+import { PermissionsService } from '@modules/administration/services/permissions.service';
+import { RolesService } from '@modules/administration/services/roles.service';
 
 
 @Component({

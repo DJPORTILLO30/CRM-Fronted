@@ -7,9 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserRegistrationPageComponent } from './pages/user-registration-page/user-registration-page.component';
-import { PermissionsPageComponent } from './pages/permissions-page/permissions-page.component';
-import { RegisterPermissionModalComponent } from './modals/register-permission-modal/register-permission-modal.component';
-import { RegisterRolesModalComponent } from './modals/register-roles-modal/register-roles-modal.component';
 
 
 
@@ -19,9 +16,6 @@ import { RegisterRolesModalComponent } from './modals/register-roles-modal/regis
     RegisterPageComponent,
     AdminPageComponent,
     UserRegistrationPageComponent,
-    PermissionsPageComponent,
-    RegisterPermissionModalComponent,
-    RegisterRolesModalComponent
   ],
   imports: [
     CommonModule,
