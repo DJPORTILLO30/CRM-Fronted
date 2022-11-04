@@ -1,0 +1,34 @@
+<table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="contactName">
+    <th mat-header-cell *matHeaderCellDef > Nombre de contacto </th>
+    <td mat-cell *matCellDef="let element"> {{element.contactName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef > Descripción </th>
+    <td mat-cell *matCellDef="let element" style="text-align: justify; padding: 25px;"> {{element.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="comunicationDate">
+    <th mat-header-cell *matHeaderCellDef > Fecha de comunicación</th>
+    <td mat-cell *matCellDef="let element"> {{element.comunicationDate | date: "dd-MM-yyyy HH:mm" }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="options">
+    <th mat-header-cell *matHeaderCellDef> Opciones </th>
+    <td mat-cell *matCellDef="let element">
+      <button class="boton" mat-raised-button color="accent" #tooltip="matTooltip" matTooltip="Editar comunicación"
+        [matTooltipPosition]="'below'" (click)="onTransferdataDialog('edit',element.id)" style="margin-right: 5px;">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button class="boton" mat-raised-button color="warn" #tooltip="matTooltip" matTooltip="Eliminar comunicación"
+        (click)="onTransferdataDialog('delete',element.id)" [matTooltipPosition]="'below'">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

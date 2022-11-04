@@ -1,0 +1,31 @@
+<h1 mat-dialog-title><strong>{{dataContact.ownerContact}}</strong></h1>
+<div mat-dialog-content>
+  <mat-card style="margin-bottom: 10px;">
+    <mat-card-header>
+      <mat-card-title>Descripción</mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="text-align: justify;">
+      {{dataContact.description}}
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>información</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div style="display:flex; align-items: center; margin-bottom: 10px;">
+        <mat-icon style="margin-right: 10px;">face</mat-icon>
+        <strong>Propietario contacto: </strong>{{dataContact.ownerContact}}
+      </div>
+      <div style="display:flex; align-items: center;  margin-bottom: 10px;">
+        <mat-icon style="margin-right: 10px;">work</mat-icon>
+        <strong>Departamento: </strong>{{dataContact.department}}
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Cerrar</button>
+</div>

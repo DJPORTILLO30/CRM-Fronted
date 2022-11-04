@@ -1,0 +1,23 @@
+table, th , td  {
+  border: none;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  text-align: center;
+  font-family: var(--font-family-2);
+  background-color: #e6edf0;
+
+}
+table tr:nth-child(even) {
+  text-align: center;
+  font-family: var(--font-family-2);
+  background-color: #dee0e1db;
+
+}
+table .thead-dark th {
+  color: #fff;
+  background-color: #1A6690;
+  text-align: center;
+  font-family: var(--font-family-3);
+}

@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "name": "SombrillaC",
+      "description": "Producto para la lluvia",
+      "Category": "Home",
+      "Price": 100,
+      "Feature": "Color Negro",
+      "id": 1
+    },
+    {
+      "name": "Sombrilla 2 C",
+      "description": "Producto de llovizna",
+      "Category": "Home",
+      "Price": 100,
+      "Feature": "Color Verde",
+      "id": 2
+    },
+    {
+      "name": "Sombrilla 3",
+      "description": "Producto para epoca de luvia",
+      "Category": "Summer",
+      "Price": 150,
+      "Feature": "Roja",
+      "id": 3
+    },
+    {
+      "name": "Sombrilla",
+      "description": "Producto para la lluvia",
+      "Category": "Home",
+      "Price": 300,
+      "Feature": "Color Negro",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

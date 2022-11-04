@@ -1,0 +1,53 @@
+<table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="ownerContact">
+      <th mat-header-cell *matHeaderCellDef style="width: 20%;"> Propietario contacto</th>
+      <td mat-cell *matCellDef="let element"> {{element.ownerContact}} </td>
+    </ng-container>
+
+    <!-- dateI Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Correo </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+    <!-- dateF Column -->
+    <ng-container matColumnDef="phone">
+      <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Teléfono </th>
+      <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+    </ng-container>
+
+    <!-- estate Column -->
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Dirección </th>
+      <td mat-cell *matCellDef="let element" style="text-align: justify; "> {{element.address}} </td>
+    </ng-container>
+
+    <!-- description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef style="width: 20%;"> Descripción </th>
+      <td mat-cell *matCellDef="let element" style="text-align: justify; "> {{element.description}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="options">
+      <th mat-header-cell *matHeaderCellDef> Opciones </th>
+      <td mat-cell *matCellDef="let element">
+        <button class="boton" mat-raised-button color="primary" (click)="onGetData(element)" #tooltip="matTooltip"
+          matTooltip="Información del contacto" [matTooltipPosition]="'below'"
+          style="margin-right: 5px;">
+          <mat-icon>info</mat-icon>
+        </button>
+        <button class="boton" mat-raised-button color="accent" #tooltip="matTooltip" matTooltip="Editar contacto"
+          [matTooltipPosition]="'below'" (click)="onTransferdataDialog('edit',element.id)" style="margin-right: 5px;">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="boton" mat-raised-button color="warn" #tooltip="matTooltip" matTooltip="Eliminar contacto"
+          (click)="onTransferdataDialog('delete',element.id)" [matTooltipPosition]="'below'">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
