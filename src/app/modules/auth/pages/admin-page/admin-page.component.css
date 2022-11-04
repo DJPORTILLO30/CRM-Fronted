@@ -107,7 +107,7 @@ input.ng-invalid.ng-touched {
     align-items:center;
     justify-content: flex-end;
     top: 10px;
-    left:76%;
+    left:96%;
     position:fixed;
     cursor: pointer;
 }
@@ -122,7 +122,7 @@ input.ng-invalid.ng-touched {
     align-items:center;
     justify-content: flex-end;
     top: 10px;
-    left:76%;
+    left:96%;
     position:fixed;
     cursor: pointer;
 }

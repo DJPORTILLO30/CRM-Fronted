@@ -8,9 +8,9 @@
 }
 
 .modal-page{
-    position:fixed;
-    top: 150px;
-    left:600px;
+    position:absolute;
+    top: 20%;
+    left:35%;
     background: rgba(0,0,0,0.5);
     transition:all 500ms ease;
     display:flex;
@@ -19,8 +19,8 @@
     align-content: center;
     justify-items:left;
     flex-direction: column;
-    width: 400px;
-    height: 400px;
+    width: 30%;
+    height: 60%;
     margin:auto;
     background-color: var(--color-4);
     box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
