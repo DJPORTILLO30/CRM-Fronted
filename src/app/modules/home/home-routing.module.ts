@@ -1,7 +1,12 @@
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  {
+    path:'dashboard',
+    component:DashboardComponent
+  },
   {
     path: 'calls',
     loadChildren: () => import('@modules/calls/calls.module').then(m => m.CallsModule)
@@ -22,7 +27,7 @@ const routes: Routes = [
     path: 'bussnies',
     loadChildren: () => import('@modules/bussnies/bussnies.module').then(m => m.BussniesModule)
   },
-  
+
 ];
 
 @NgModule({
