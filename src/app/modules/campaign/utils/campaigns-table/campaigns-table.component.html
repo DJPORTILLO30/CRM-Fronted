@@ -1,0 +1,53 @@
+<table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombreCampania">
+      <th mat-header-cell *matHeaderCellDef style="width: 20%;"> Nombre campaña</th>
+      <td mat-cell *matCellDef="let element"> {{element.nombreCampania}} </td>
+    </ng-container>
+
+    <!-- dateI Column -->
+    <ng-container matColumnDef="fechaInicio">
+      <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Fecha inicio</th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaInicio}} </td>
+    </ng-container>
+    <!-- dateF Column -->
+    <ng-container matColumnDef="fechaFin">
+      <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Fecha fin</th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaFin}} </td>
+    </ng-container>
+  
+    <!-- estate Column -->
+    <ng-container matColumnDef="estado">
+      <th mat-header-cell *matHeaderCellDef style="width: 10%;"> Estado </th>
+      <td mat-cell *matCellDef="let element" style="text-align: justify; "> {{element.estado}} </td>
+    </ng-container>
+
+    <!-- description Column -->
+    <ng-container matColumnDef="descripcion">
+      <th mat-header-cell *matHeaderCellDef style="width: 20%;"> Descripción </th>
+      <td mat-cell *matCellDef="let element" style="text-align: justify; "> {{element.descripcion}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="options">
+      <th mat-header-cell *matHeaderCellDef> Opciones </th>
+      <td mat-cell *matCellDef="let element">
+        <button class="boton" mat-raised-button color="primary" (click)="onGetData(element)" #tooltip="matTooltip"
+          matTooltip="Información de la campaña" [matTooltipPosition]="'below'"
+          style="margin-right: 5px;">
+          <mat-icon>info</mat-icon>
+        </button>
+        <button class="boton" mat-raised-button color="accent" #tooltip="matTooltip" matTooltip="Editar campaña"
+          [matTooltipPosition]="'below'" (click)="onTransferdataDialog('edit',element.id)" style="margin-right: 5px;">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="boton" mat-raised-button color="warn" #tooltip="matTooltip" matTooltip="Eliminar campaña"
+          (click)="onTransferdataDialog('delete',element.id)" [matTooltipPosition]="'below'">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

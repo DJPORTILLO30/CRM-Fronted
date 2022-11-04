@@ -1,0 +1,19 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">{{header1}}</th>
+      <th scope="col">{{header2}}</th>
+      <th scope="col">{{header3}}</th>
+      <th scope="col">{{header4}}</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataList">
+      <th scope="row">{{data._id}} {{data.id}}</th>
+      <td>{{data.ownerContact}} {{data.name}} {{data.contactName}} {{data.nombreCampania}} </td>
+      <td>{{data.email}} {{data.income}} {{data.comunicationDate}} {{data.estado}}</td>
+      <td> {{data.description}} {{data.descripcion}}</td>
+    </tr>
+  </tbody>
+</table>
