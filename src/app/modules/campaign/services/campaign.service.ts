@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { CampaignModel } from '@core/models/campaigns/campaign.model';
 
@@ -11,7 +11,17 @@ export class CampaignService {
 
   URL: string = `${environment.api}/campaigns`;
 
+
   constructor(private http: HttpClient) { }
+
+  getAllCampaign$(): Observable<any> {
+    return this.http.get(this.URL)
+      .pipe(
+        map(({ data }: any) => {
+          return data
+        })
+      )
+  }
 
   getCampaigns(): Observable<CampaignModel[]> {
     return this.http.get<CampaignModel[]>(this.URL);

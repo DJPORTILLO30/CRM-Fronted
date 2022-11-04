@@ -1,3 +1,5 @@
+import { CampaignService } from './../../../campaign/services/campaign.service';
+import { CampaignModel } from '@core/models/campaigns/campaign.model';
 import { CallsService } from './../../../calls/services/calls/calls.service';
 import { Calls } from '@core/models/calls/calls';
 import { BussinesService } from '@modules/bussnies/services/bussines/bussines.service';
@@ -16,14 +18,16 @@ export class DashboardComponent implements OnInit {
   mockContactList: Array<ContactsModel> = [];
   mockBussniesList: Array<Bussines> = [];
   mockCallsList: Array<Calls> = [];
+  mockCampagin: Array<CampaignModel> = [];
 
-  constructor(private bussnies: BussinesService , private calls: CallsService) { }
+  constructor(private bussnies: BussinesService , private calls: CallsService, private campaign : CampaignService) { }
 
   ngOnInit(): void {
     const {data} : any = (dataRaw as any).default
     this.mockContactList = data
     this.loadAllDataBussnies();
     this.loadAllDataCalls();
+    this.loadAllDataCampaign();
   }
 
   loadAllDataBussnies(): void {
@@ -37,6 +41,15 @@ export class DashboardComponent implements OnInit {
     this.calls.getAllCalls$()
     .subscribe((response : Calls[]) => {
       this.mockCallsList = response
+    })
+  }
+
+
+
+  loadAllDataCampaign(): void {
+    this.campaign.getAllCampaign$()
+    .subscribe((response : CampaignModel[]) => {
+      this.mockCampagin = response
     })
   }
 }

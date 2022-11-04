@@ -1,5 +1,6 @@
 
 export interface CampaignModel {
+        id: number,
         propietarioCampania: string,
         nombreCampania: string,
         idTipoCampania: number,
@@ -7,4 +8,4 @@ export interface CampaignModel {
         fechaFin: Date,
         estado: string,
         descripcion: string
-} 
+}

@@ -20,32 +20,32 @@ export class HeaderBarComponent implements OnInit {
     this.mainMenu.defaultOptions = [
       {
         name: 'Inicio',
-        icon: 'uil uil-estate',
+        icon: 'uil uil-file-landscape-alt',
         router: ['/', 'dashboard']
       },
       {
         name: 'Productos',
-        icon: 'uil uil-search',
+        icon: 'uil uil-clipboard-notes',
         router: ['/', 'products']
       },
       {
         name: 'Negocios',
-        icon: 'uil uil-chart',
+        icon: 'uil uil-wallet',
         router: ['/', 'bussnies']
       },
       {
         name: 'Campañas',
-        icon: 'uil uil-chart',
+        icon: 'uil uil-shop',
         router: ['/', 'campaign'],
       },
       {
         name: 'Contactos',
-        icon: 'uil uil-chart',
+        icon: 'uil uil-user-circle',
         router: ['/', 'contacs'],
       },
       {
         name: 'Comunicaciones',
-        icon: 'uil uil-chart',
+        icon: 'uil uil-phone-volume',
         router: ['/', 'calls'],
       }
     ]

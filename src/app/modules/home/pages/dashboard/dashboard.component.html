@@ -1,6 +1,6 @@
 <div class="box">
   <div class="tb1">
-    <app-table-info [dataList]="mockContactList" [header1]="'ID'" [header2]="'Nombre'" [header3]="'Email'" [header4]="'Numero'"></app-table-info>
+    <app-table-info [dataList]="mockCampagin" [header1]="'ID'" [header2]="'Nombre Campaña'" [header3]="'Estado'" [header4]="'Descripcion'"></app-table-info>
   </div>
   <div class="tb2">
     <app-table-info [dataList]="mockBussniesList" [header1]="'ID'" [header2]="'Nombre'" [header3]="'Ingresos'" [header4]="'Descripcion'" ></app-table-info>
@@ -9,6 +9,6 @@
     <app-table-info [dataList]="mockCallsList" [header1]="'ID'" [header2]="'Nombre de Contacto'" [header3]="'Fecha de llamda'" [header4]="'Descripcion'"></app-table-info>
   </div>
   <div class="tb4">
-    <app-table-info></app-table-info>
+    <app-table-info [dataList]="mockContactList" [header1]="'ID'" [header2]="'Nombre'" [header3]="'Email'" [header4]="'Descripcion'"></app-table-info>
   </div>
 </div>
