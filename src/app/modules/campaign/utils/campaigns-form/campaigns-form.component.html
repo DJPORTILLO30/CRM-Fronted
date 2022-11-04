@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>{{dataDialog.title}}</h1>
+<div mat-dialog-content>
+  <ng-container *ngIf="this.dataDialog.actionForm !== 'delete'; else elseFormBussines">
+    <form [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>Propietario Campaña</mat-label>
+        <input formControlName="propietarioCampania" matInput placeholder="Ej. Jhon Cena">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre de la campaña</mat-label>
+        <input formControlName="nombreCampania" matInput placeholder="Ej. Presentación de nuevo producto">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Id tipo campaña</mat-label>
+        <textarea formControlName="idTipoCampania" matInput type="number" placeholder="Ej. 1"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha inicio</mat-label>
+        <input formControlName="fechaInicio" matInput type="date" >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha fin</mat-label>
+        <input formControlName="fechaFin" matInput matInput type="date" >
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Estado</mat-label>
+        <input formControlName="estado" matInput type="text" placeholder="Ej. ACTIVO">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input formControlName="descripcion" matInput type="text" placeholder="Ej. Campaña para presentación de un nuevo producto.">
+      </mat-form-field>
+    </form>
+  </ng-container>
+  <ng-template #elseFormBussines>
+    <strong>¿Desea eliminar en verdad la campaña?</strong>
+  </ng-template>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">{{dataDialog.titleButton}}</button>
+</div>

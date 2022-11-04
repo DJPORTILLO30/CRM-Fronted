@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   api:'https://crm-umg2022.herokuapp.com/api'
-  //api:'http://localhost:3000/api'
 };
 
 /*
