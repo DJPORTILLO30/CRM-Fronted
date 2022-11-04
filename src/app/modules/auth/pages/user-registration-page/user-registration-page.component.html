@@ -1,5 +1,8 @@
 <div class="user-page">
     <div class="container"> 
+        <a href="/administration/permissions">
+            <input type="button" class="gestion-btn" value="Gestionar Roles y Permisos"><i></i>
+        </a>
         <div class="header">
             <h1>Usuarios Registrados</h1>
             <div class="form-action" >
@@ -19,6 +22,7 @@
                             <th for="state">Estado</th>
                             <th for="role">Rol</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,6 +38,11 @@
                             <td>
                                 <div class="form-action" >
                                     <button (click)="deleteUser(user.id) "class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-action" >
+                                    <button class="edit-btn"> <i class="uil uil-edit"></i></button>
                                 </div>
                             </td>
                         </tr>

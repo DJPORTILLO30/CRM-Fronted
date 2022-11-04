@@ -7,7 +7,8 @@
     "axe/name-role-value": [
       "default",
       {
-        "button-name": "off"
+        "button-name": "off",
+        "input-button-name": "off"
       }
     ]
   }

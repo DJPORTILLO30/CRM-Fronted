@@ -2,7 +2,6 @@
     <div class="container"> 
         <div class="header">
             <h1>Permisos</h1>
-            <button (click)="openModalPermission()"   class="register-btn-permission"><i class="uil uil-plus"></i></button>
         </div>
         <div class="permissions-wrapper">
             <form class="permissions-table">
@@ -30,7 +29,6 @@
     <div class="container"> 
     <div class="header">
         <h1>Roles</h1>
-        <button (click)="openModalRole()" class="register-btn-role"><i class="uil uil-plus"></i></button>
     </div>
         <div class="roles-wrapper">
             <form class="roles-table">
@@ -59,7 +57,15 @@
         </div>
     </div>
 </div>
+<div class="btn-new-permission">
+    <div class="form-action" >
+        <button (click)="openModalPermission()"   class="register-btn-permission"><i class="uil uil-plus"></i></button>
+    </div>
+</div>
 <div class="btn-new-role">
+    <div class="form-action" >
+        <button (click)="openModalRole()" class="register-btn-role"><i class="uil uil-plus"></i></button>
+    </div>
     <a href="/auth/info-users">
         <input type="button" class="btn-back" ><i class="uil uil-arrow-left"></i>
     </a>

@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { UserRegistrationPageComponent } from './pages/user-registration-page/user-registration-page.component';
 import { RegisterUserModalComponent } from './modals/register-user-modal/register-user-modal.component';
+import { UpdateUserModalComponent } from './modals/update-user-modal/update-user-modal.component';
 
 
 
@@ -18,6 +19,7 @@ import { RegisterUserModalComponent } from './modals/register-user-modal/registe
     AdminPageComponent,
     UserRegistrationPageComponent,
     RegisterUserModalComponent,
+    UpdateUserModalComponent,
   ],
   imports: [
     CommonModule,
