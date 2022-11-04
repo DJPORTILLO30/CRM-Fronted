@@ -2,6 +2,9 @@
     <div class="container"> 
         <div class="header">
             <h1>Usuarios Registrados</h1>
+            <div class="form-action" >
+                <button class="register-btn"><i class="uil uil-plus"></i></button>
+            </div>
         </div>
         <div class="user-wrapper">
             <form class="user-table">
@@ -32,16 +35,14 @@
                                 <div class="form-action" >
                                     <button (click)="deleteUser(user.id) "class="delete-btn"><i class="uil uil-trash-alt"></i></button>
                                 </div>
-                                <div class="form-action" >
-                                    <button class="register-btn"><i class="uil uil-edit"></i></button>
-                                </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                
             </form>
-           
             
+           
         </div>
     </div>
     
