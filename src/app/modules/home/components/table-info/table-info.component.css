@@ -1,11 +1,23 @@
 table, th , td  {
-  border: 1px solid grey;
+  border: none;
   border-collapse: collapse;
   padding: 5px;
 }
 table tr:nth-child(odd) {
-  background-color: #f1f1f1;
+  text-align: center;
+  font-family: var(--font-family-2);
+  background-color: #e6edf0;
+
 }
 table tr:nth-child(even) {
-  background-color: #ffffff;
+  text-align: center;
+  font-family: var(--font-family-2);
+  background-color: #dee0e1db;
+
+}
+table .thead-dark th {
+  color: #fff;
+  background-color: #1A6690;
+  text-align: center;
+  font-family: var(--font-family-3);
 }
