@@ -2,6 +2,9 @@
     <div class="container"> 
         <div class="header">
             <h1>Permisos</h1>
+            <div class="form-action" >
+                <button (click)="openModalPermission()"   class="register-btn-permission"><i class="uil uil-plus"></i></button>
+            </div>
         </div>
         <div class="permissions-wrapper">
             <form class="permissions-table">
@@ -29,6 +32,9 @@
     <div class="container"> 
     <div class="header">
         <h1>Roles</h1>
+        <div class="form-action" >
+            <button (click)="openModalRole()" class="register-btn-role"><i class="uil uil-plus"></i></button>
+        </div>
     </div>
         <div class="roles-wrapper">
             <form class="roles-table">
@@ -47,7 +53,7 @@
                             <td>{{role.name}}</td>
                             <td>{{role.description}}</td>
                             <td>
-                                <button (click)="deleteRole(role.id)" class="delete-btn"><i class="uil uil-trash-alt"></i></button>
+                                <button (click)="deleteRole(role.id)" class="delete-btn"><i class="uil uil-user-plus"></i></button>
                             </td>
                         </tr>
                     </tbody>
@@ -57,15 +63,8 @@
         </div>
     </div>
 </div>
-<div class="btn-new-permission">
-    <div class="form-action" >
-        <button (click)="openModalPermission()"   class="register-btn-permission"><i class="uil uil-plus"></i></button>
-    </div>
-</div>
+
 <div class="btn-new-role">
-    <div class="form-action" >
-        <button (click)="openModalRole()" class="register-btn-role"><i class="uil uil-plus"></i></button>
-    </div>
     <a href="/auth/info-users">
         <input type="button" class="btn-back" ><i class="uil uil-arrow-left"></i>
     </a>
