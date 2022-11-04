@@ -7,9 +7,9 @@
     justify-content: center;
 }
 .modal-user{
-    position:fixed;
-    top: 40px;
-    left:600px;
+    position:absolute;
+    top: 1.5%;
+    left:30%;
     background: rgba(0,0,0,0.5);
     transition:all 500ms ease;
     display:flex;
@@ -18,8 +18,8 @@
     align-content: center;
     justify-items:left;
     flex-direction: column;
-    width: 400px;
-    height: 650px;
+    width: 40%;
+    height: 97%;
     margin:auto;
     background-color: var(--color-4);
     box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
@@ -35,8 +35,8 @@
     font-family: var(--font-family-2);
     font-size: var(--font-size-1);
     color:var(--color-5);
-    width: 300px;
-    height: 20px;
+    width: 100%;
+    height: 25%;
     box-shadow: var(--shadow-2);
     border: 0
 }
@@ -45,11 +45,11 @@
     color:var(--color-4);
     font-family: var(--font-family-3);
     font-size: var(--font-size-2);
-    width: 200px;
+    width: 80%;
     height:40px;
     border:0;
     margin-top: 1rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
     cursor: pointer;
 }
 .exit-btn{

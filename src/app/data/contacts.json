@@ -1,0 +1,21 @@
+{
+  "data": [{
+    "_id":1 ,
+    "ownerContact" : "prueba1",
+    "email" : "test@test.com",
+    "phone": 1236548,
+    "department":"finanzasPrueba",
+    "address":"02prueba",
+    "description":"test"
+  },
+  {
+    "_id":2 ,
+    "ownerContact" : "prueba12",
+    "email" : "test@test.com2",
+    "phone": 12365482,
+    "department":"finanzasPrueba2",
+    "address":"02prueba2",
+    "description":"test2"
+  }
+]
+}
