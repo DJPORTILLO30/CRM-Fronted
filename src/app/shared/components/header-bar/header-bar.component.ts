@@ -21,7 +21,7 @@ export class HeaderBarComponent implements OnInit {
       {
         name: 'Inicio',
         icon: 'uil uil-estate',
-        router: ['/', '/']
+        router: ['/', 'dashboard']
       },
       {
         name: 'Productos',

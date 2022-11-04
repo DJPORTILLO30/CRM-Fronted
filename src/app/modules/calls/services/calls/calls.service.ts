@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Calls } from '@core/models/calls/calls';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -12,6 +12,16 @@ export class CallsService {
   urlBase: string = environment.api + "/llamadas";
 
   constructor(private http: HttpClient) { }
+
+  getAllCalls$(): Observable<any> {
+    return this.http.get(this.urlBase)
+      .pipe(
+        map(({ data }: any) => {
+          return data
+        })
+      )
+  }
+
 
   getCalls(): Observable<Calls[]> {
     return this.http.get<Calls[]>(this.urlBase);

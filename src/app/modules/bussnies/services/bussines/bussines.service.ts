@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Bussines } from '@core/models/bussines/bussines';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,16 @@ export class BussinesService {
   urlBase: string = environment.api + "/negocio";
 
   constructor(private http: HttpClient) { }
+
+
+  getAllBussnies$(): Observable<any> {
+    return this.http.get(this.urlBase)
+      .pipe(
+        map(({ data }: any) => {
+          return data
+        })
+      )
+  }
 
   getBussines(): Observable<Bussines[]> {
     return this.http.get<Bussines[]>(this.urlBase);
