@@ -4,6 +4,7 @@ table, th , td  {
   padding: 5px;
 }
 table tr:nth-child(odd) {
+  border: none;
   text-align: center;
   font-family: var(--font-family-2);
   background-color: #e6edf0;
@@ -11,12 +12,14 @@ table tr:nth-child(odd) {
 }
 table tr:nth-child(even) {
   text-align: center;
+  border: none;
   font-family: var(--font-family-2);
   background-color: #dee0e1db;
 
 }
 table .thead-dark th {
   color: #fff;
+  border: none;
   background-color: #1A6690;
   text-align: center;
   font-family: var(--font-family-3);
